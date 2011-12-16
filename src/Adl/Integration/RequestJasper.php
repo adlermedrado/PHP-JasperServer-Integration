@@ -35,7 +35,7 @@ XML_TEMPLATE;
 		return $xmlTemplate;
 	}
 	
-	public function runReport($reportName,$formatType = 'PDF', $reportParams = null, $saveFile = false)
+	public function run($reportName,$formatType = 'PDF', $reportParams = null, $saveFile = false)
 	{
 		$client = new \SoapClient($this->jasperServer->getWsdl(), 
 								 array('login' => $this->jasperServer->getUsername(), 
@@ -43,7 +43,7 @@ XML_TEMPLATE;
 								 "trace" => 1, "exceptions" => 0)
 					   );
 
-		$client->run($this->_requestMock($reportName, $formatType, $reportParams));
+		$client->runReport($this->_requestMock($reportName, $formatType, $reportParams));
 		
 		preg_match('/boundary="(.*?)"/', $client->__getLastResponseHeaders(), $gotcha);
 
