@@ -15,13 +15,13 @@ try {
 	To send output to browser
 	*/
 	header('Content-type: application/pdf');
-	echo $jasper->run('/reports/samples/AllAccounts',$formatType = 'PDF');
+	echo $jasper->run('/reports/samples/AllAccounts');
 	
 	/*
 	To Save content to a file in the disk
 	The path where the file will be saved is registered into config/data.ini
 	*/
-	//$jasper->runReport('/reports/samples/AllAccounts',$formatType = 'PDF', null, true);
+	//$jasper->runReport('/reports/samples/AllAccounts','PDF', null, true);
 
 } catch (\Exception $e) {
 	echo $e->getMessage();
