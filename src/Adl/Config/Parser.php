@@ -13,7 +13,12 @@ class Parser
 	
 	protected function parse()
 	{
-		$config = parse_ini_file(\Adl\Configuration::getRootDir() . DIRECTORY_SEPARATOR . 'config' . DIRECTORY_SEPARATOR . 'data.ini', true);
+		$config = parse_ini_file(\Adl\Configuration::getRootDir() 
+      . DIRECTORY_SEPARATOR 
+      . 'config' 
+      . DIRECTORY_SEPARATOR
+      . 'data.ini', true);
+    
 		$jasperServer = new JasperServer($config);
 		$_SESSION['jasperServer'] = serialize($jasperServer);
 	}
