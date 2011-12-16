@@ -43,7 +43,7 @@ XML_TEMPLATE;
 								 "trace" => 1, "exceptions" => 0)
 					   );
 
-		$client->runReport($this->_requestMock($reportName, $formatType, $reportParams));
+		$client->run($this->_requestMock($reportName, $formatType, $reportParams));
 		
 		preg_match('/boundary="(.*?)"/', $client->__getLastResponseHeaders(), $gotcha);
 

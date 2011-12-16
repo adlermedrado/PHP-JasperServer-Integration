@@ -18,7 +18,7 @@ try {
 	To send output to browser
 	*/
 	header('Content-type: application/pdf');
-	echo $jasper->runReport('/reports/samples/AllAccounts',$formatType = 'PDF');
+	echo $jasper->run('/reports/samples/AllAccounts',$formatType = 'PDF');
 	
 	/*
 	To Save content to a file in the disk
