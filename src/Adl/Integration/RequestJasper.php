@@ -47,9 +47,9 @@ XML_TEMPLATE;
 		
 		preg_match('/boundary="(.*?)"/', $client->__getLastResponseHeaders(), $gotcha);
 
-		$boundary = $gotcha[1];
+		$bound = $gotcha[1];
 		
-		$invokeReturnPart = explode($boundary, $client->__getLastResponse());
+		$invokeReturnPart = explode($bound, $client->__getLastResponse());
 
 		$output = substr($invokeReturnPart[2], (strpos($invokeReturnPart[2], '<report>') + 9));
 
