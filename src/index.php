@@ -21,7 +21,7 @@ try {
 	To Save content to a file in the disk
 	The path where the file will be saved is registered into config/data.ini
 	*/
-	//$jasper->runReport('/reports/samples/AllAccounts','PDF', null, true);
+	//$jasper->run('/reports/samples/AllAccounts','PDF', null, true);
 
 } catch (\Exception $e) {
 	echo $e->getMessage();
