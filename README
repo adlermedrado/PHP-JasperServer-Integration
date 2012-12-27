@@ -1,5 +1,3 @@
-[![endorse](http://api.coderwall.com/adlermedrado/endorsecount.png)](http://coderwall.com/adlermedrado)
-
 A simple library that allows PHP projects to communicate with JasperServer using SOAP.
 Just plug it into your project and you will easily can generate your jasper reports stored into an JasperServer
 
